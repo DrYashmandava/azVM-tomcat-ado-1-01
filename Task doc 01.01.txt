@@ -1,0 +1,38 @@
+Channel - VRK Solutions
+
+git repository - https://github.com/vrk4frnds/azVM-tomcat-ado
+
+tomcat hosted in an Azure VM and deploy war file into tomcat and automated and which has to be done by Azure DevOps pipelines
+
+1. Azure DevOps environment - Repository and build pipeline and release pipeline and service connection
+2. Create Azure VM - ARM templates
+3. Install tomcat into Azure VM - custom script extension which i will execute through powershell
+4. deploy war file into tomcat - powershell
+
+1. Azure DevOps environment - Repository and build pipeline and release pipeline and service connection
+Project - done
+clone repository to local - done
+build pipeline - done
+release pipeline - done
+service connection - done
+
+2. Create Azure VM
+uploaded ARM template to repository - done 
+task in build pipeline - done 
+task in release pipeline - done
+validate it going into azure portal - done
+
+3. Install tomcat into Azure VM
+Create storage account - done
+build shell script - done
+uploaded shell script to repository - done 
+modified the tasks in build pipeline - done
+    modified the copy file task to copy shell script
+
+modified the tasks in release pipeline - done
+    Arm output to be converted into pipeline variables - Powershell task - done
+    Azure File copy task - to copy shell script from artifact to storage account - done
+    Azure Powershell Task - to execute the custom script extension inside azure vm - done
+
+4. deploy war file into tomcat 
+    shell script is deploying war file - done
